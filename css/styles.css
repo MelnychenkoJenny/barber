@@ -1,12 +1,514 @@
+:root {
+  --primary-text-color: #303030;
+  --accent-color: #ff6c00;
+  --white-color: #FFFFFF;
+  --grey-color: #9da4bd;
+  --grey-opacity-color: rgba(157, 164, 189, 0.6);
+  --text-color: #555555;
+  --background-prices: #111319;
+  --background-contacts: #191C26;
+  --background-barbers-footer: #F7F7F7;
+}
+
+body {
+  background-color: var(--white-color);
+  color: var(--primary-text-color);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.6667;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  text-transform: none;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 2px solid tomato;
+}
+
 .visually-hidden {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
-  }
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+/* ---------------------HEADER--------------------- */
+.header {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background-color: #555555;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 131px;
+}
+
+.navigation {
+  margin-right: auto;
+}
+
+.nav-list {
+  display: flex;
+  gap: 30px;
+}
+
+
+.nav-link,
+.nav-tel {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: var(--white-color);
+  font-size: 12px;
+  line-height: 1.3333;
+  letter-spacing: 0.1em;
+}
+
+.nav-tel {
+  margin-right: 40px;
+}
+
+.nav-tel {
+text-transform: uppercase;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-tel:hover,
+.nav-tel:focus {
+  color: var(--accent-color);
+}
+
+/* ---------------------HERO--------------------- */
+
+.hero-container {
+  display: flex;
+}
+
+.hero-list {
+  width: 100px;
+  background-color: var(--white-color);
+}
+
+.hero-wrap {
+  padding: 272px 100px 208px 100px;
+  flex-grow: 1;
+  background-image: url(../image/slider-img-three.jpg);
+  /* background-repeat: no-repeat;
+  background-size: cover; */
+
+}
+
+.hero-link,
+.footer-link {
+  color: var(--primary-text-color);
+  font-size: 11px;
+  line-height: 1.3636px;
+  letter-spacing: 0.2em;
+}
+
+.hero-link:hover,
+.hero-link:focus,
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--accent-color);
+}
+
+.uptitle {
+  font-size: 11px;
+  line-height: 1.3636;
+  text-transform: uppercase;
+}
+
+.hero-uptitle {
+  margin-bottom: 20px;
+  color: var(--grey-opacity-color);
+}
+
+.hero-title {
+  margin-bottom: 20px;
+  color: var(--white-color);
+  font-family: 'Raleway', sans-serif;
+  font-size: 72px;
+  line-height: 1.1806;
+  letter-spacing: 0.05em;
+}
+
+.subtitle,
+.prices-item-text {
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.hero-subtitle {
+  max-width: 357px;
+  color: var(--grey-color);
+}
+
+/* ---------------------ABOUT--------------------- */
+
+.about {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.about-container {
+  display: flex;
+  gap: 30px;
+}
+
+.about-list {
+  display: flex;
+  gap: 30px;
+}
+
+.about-item {
+  flex-basis: calc(100% - 30px / 2);
+}
+
+.about-wrap {
+  max-width: 470px;
+}
+
+.about-uptitle {
+  margin-bottom: 20px;
+}
+
+.about-title {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 42px;
+  line-height: 1.1667;
+  letter-spacing: 0.05em;
+}
+
+.about-subtitle{
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.about-text {
+  margin-bottom: 42px;
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.8571;
+  letter-spacing: 0.02em;
+}
+
+/* ---------------------PRICES--------------------- */
+
+.prices {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  
+  background-color: var(--background-prices);
+  background-image: url(../image/prices.jpg);
+}
+
+.prices-uptitle {
+  margin-bottom: 20px;
+  color: var(--grey-opacity-color);
+}
+
+.prices-title {
+  margin-bottom: 44px;
+  color: var(--white-color);
+}
+
+.prices-wrap {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 44px;
+}
+
+.prices-list {
+  outline: 1px solid white;
+  padding: 30px 20px;
+  width: calc((100% - 30px) / 2);
+}
+
+.prices-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.prices-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.prices-item-text {
+  color: var(--grey-color);
+}
+
+/* ---------------------BENEFITS--------------------- */
+
+.benefits {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.benefits-item {
+  padding: 20px 24px;
+  width: 170px;
+  height: 133px;
+  text-align: center;
+}
+
+.benefits-uptitle {
+  margin-bottom: 20px;
+}
+
+.benefits-title {
+  margin-bottom: 20px;
+}
+
+.benefits-subtitle{
+  color: var(--text-color);
+}
+
+.benefits-count {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.3571;
+  letter-spacing: 0.05em;
+}
+
+.benefits-plus {
+  font-size: 16px;
+  line-height: 1.375;
+  color: var(--accent-color);
+  text-transform: uppercase;
+}
+
+.benefits-item-text {
+  font-size: 11px;
+  line-height: 1.3636;
+}
+
+/* ---------------------BARBERS--------------------- */
+
+.barbers {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: var(--background-barbers-footer);
+}
+
+
+.barbers-uptitle {
+  margin-bottom: 20px;
+}
+
+.barbers-title {
+  margin-bottom: 44px;
+}
+
+.barbers-list {
+  display: flex;
+  gap: 30px;
+}
+
+.barbers-image {
+  margin-bottom: 30px;
+}
+
+.barbers-item {
+  flex-basis: calc((100% - 60px) / 3);
+}
+
+.barbers-item-title {
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.3889;  
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.barbers-item-text {
+  margin-bottom: 30px;
+  color: var(--accent-color);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.3571;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+/* ---------------------PORTFOLIO--------------------- */
+
+.portfolio {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.portfolio-uptitle {
+  margin-bottom: 44px;
+}
+
+.portfolio-list {
+  display: flex;
+  gap: 30px;
+}
+
+.portfolio-item {
+  flex-basis: calc((100% - 90px) / 4);
+}
+
+/* ---------------------CONTACTS--------------------- */
+
+.contacts {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: var(--background-contacts);
+}
+
+.contacts-title {
+  margin-bottom: 40px;
+  color: var(--white-color);
+}
+
+.contacts-address {
+  font-style: normal;
+}
+
+.contacts-list {
+  margin-bottom: 70px;
+}
+
+.contacts-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/* .contacts-list:first-child {
+  font-weight: 700;
+
+}      */
+
+.contacts-link,
+.contacts-text {
+  color: var(--grey-color);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.contacts-uptitle {
+  display: block;
+  margin-bottom: 20px;
+  color: var(--white-color);
+}
+
+/* ---------------------FOOTER--------------------- */
+
+.footer {
+  padding-top: 56px;
+  padding-bottom: 56px;
+  background-color: var(--background-barbers-footer);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.footer-list {
+  display: flex;
+  gap: 40px;
+}
+
+.footer-text {
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 0.2em;
+  color: var(--grey-color);
+}
+
+/* ---------------------BUTTON--------------------- */
+
+.button {
+  min-width: 160px;
+  height: 40px;
+  
+  border-radius: 25px;
+  border: 1px solid var(--accent-color);
+  background-color: transparent;
+  
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3333;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+}
+
+.button.primary:hover,
+.button.primary:focus,
+.button.secondary:hover,
+.button.secondary:focus {
+  color: var(--white-color);
+  background: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+}
+
+.button.primary {
+  color: var(--white-color);
+}
+
+.button.secondary {
+  color: var(--primary-text-color);
+}
+
+.btn-prices {
+  display: block;
+  margin: 0 auto;
+}
+
+
